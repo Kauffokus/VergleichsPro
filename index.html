@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechLotse | Premium Produkt- & Vergleichsportal 2026</title>
-    <meta name="description" content="TechLotse ist das datenbasierte Vergleichsportal der nächsten Generation. Unabhängige Tests, transparente Scoreboards & Echtzeit-Analysen über 50 Fachbereiche.">
+    <title>KaufFokus | Premium Produkt- & Vergleichsportal 2026</title>
+    <meta name="description" content="KaufFokus ist das datenbasierte Vergleichsportal der nächsten Generation. Unabhängige Tests, transparente Scoreboards & Echtzeit-Analysen über 50 Fachbereiche.">
     
     <!-- Google Fonts & FontAwesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,12 +17,12 @@
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "TechLotse",
-      "url": "https://techlotse.de",
+      "name": "KaufFokus",
+      "url": "https://kauffokus.de",
       "description": "Premium Produkt- & Vergleichsportal 2026",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://techlotse.de/?s={search_term_string}",
+        "target": "https://kauffokus.de/?s={search_term_string}",
         "query-input": "required name=search_term_string"
       }
     }
@@ -589,7 +589,7 @@
         <div class="nav-container">
             <div class="logo" onclick="resetView()">
                 <div class="logo-icon"><i class="fa-solid fa-compass"></i></div>
-                TechLotse
+                KaufFokus
             </div>
             
             <div class="nav-actions">
@@ -650,7 +650,7 @@
     <footer>
         <div class="footer-grid">
             <div class="footer-col">
-                <h4>TechLotse 2026</h4>
+                <h4>KaufFokus 2026</h4>
                 <p>Das unabhängige High-Performance Portal für Unterhaltungselektronik, Haushalt und Smart Home Produkte.</p>
             </div>
             <div class="footer-col">
@@ -665,7 +665,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2026 TechLotse. Alle Rechte vorbehalten.
+            &copy; 2026 KaufFokus. Alle Rechte vorbehalten.
         </div>
     </footer>
 
@@ -686,7 +686,6 @@
 
         const database = [];
 
-        // Dynamic Database Population (50 categories x 10 products = 500 items)
         categories.forEach((cat, idx) => {
             for(let i = 1; i <= 10; i++) {
                 let badge = i === 1 ? "testsieger" : (i === 2 ? "preisleistung" : (i === 3 ? "topseller" : (i === 4 ? "premium" : "")));
@@ -717,7 +716,6 @@
         let activeCategory = "All";
 
         function initUI() {
-            // Dropdown Menu
             const dropdown = document.getElementById("dropdownCategories");
             let dropHtml = `<div class="dropdown-item" onclick="selectCategory('All')"><span>Alle 50 Kategorien</span><span>500</span></div>`;
             categories.forEach(c => {
@@ -725,7 +723,6 @@
             });
             dropdown.innerHTML = dropHtml;
 
-            // Pills Scroll
             const pills = document.getElementById("pillsScroll");
             let pillsHtml = `<div class="cat-pill active" onclick="selectCategory('All')">Alle Kategorien</div>`;
             categories.forEach(c => {
@@ -795,7 +792,7 @@
                                 ${p.specs.map(s => `<li><i class="fa-solid fa-check"></i> ${s}</li>`).join('')}
                             </ul>
                             <div class="score-box">
-                                <span class="score-label">TechLotse Rating:</span>
+                                <span class="score-label">KaufFokus Rating:</span>
                                 <span class="score-value">${p.score} / 10</span>
                             </div>
                             <div class="product-footer">
@@ -814,7 +811,6 @@
 
             grid.innerHTML = html;
 
-            // Scroll Reveal Animation (Intersection Observer)
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -827,7 +823,7 @@
         }
 
         const legalTexts = {
-            impressum: `<h3>Impressum</h3><br><p><strong>Angaben gemäß § 5 DDG:</strong><br>Jeshua Evertman<br>TechLotse Portal<br>Musterstraße 12<br>48599 Gronau<br><br>E-Mail: kontakt@techlotse.de</p>`,
+            impressum: `<h3>Impressum</h3><br><p><strong>Angaben gemäß § 5 DDG:</strong><br>Jeshua Evertman<br>KaufFokus Portal<br>Musterstraße 12<br>48599 Gronau<br><br>E-Mail: kontakt@kauffokus.de</p>`,
             datenschutz: `<h3>Datenschutzerklärung</h3><br><p>Wir verarbeiten Daten streng nach DSGVO. Beim Klicken auf Affiliate-Links gelten die Bestimmungen der jeweiligen Zielplattform.</p>`,
             disclaimer: `<h3>Haftungsausschluss</h3><br><p>Alle Preise und Produktdaten werden kontinuierlich abgeglichen, können sich jedoch kurzfristig ändern. Alle Angaben ohne Gewähr.</p>`
         };
